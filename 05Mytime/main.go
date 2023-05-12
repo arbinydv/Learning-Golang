@@ -30,4 +30,6 @@ func main() {
 
 	fmt.Println(customDate.Format("01-02-2006 15:04:05 Monday"))
 
+	// RubyDate formatting
+	fmt.Println(presentTime.Format(time.RubyDate))
 }
