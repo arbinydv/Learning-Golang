@@ -13,9 +13,9 @@ func main() {
 
 	values := []int{1, 2, 3, 4, 5}
 
-	for i, _ := range values {
-		defer fmt.Printf("Number is: %v\n", i)
+	for _, number := range values {
+		defer fmt.Printf("Number is: %v\n", number)
 	}
-
-	// Defer works in LIFO order
+	// Defer works based on a LIFO for values
+	// Defer(1)  Defer(2)  Defer(3)  Defer(4)  Defer(5) <- this the last and will be printed first
 }
